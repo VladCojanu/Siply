@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "629900271442",
+    "firebase_url": "https://drunkenly-e1947.firebaseio.com",
+    "project_id": "drunkenly-e1947",
+    "storage_bucket": "drunkenly-e1947.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629900271442:android:bdac41079634cce2",
+        "android_client_info": {
+          "package_name": "com.siply.siply"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629900271442-1at51elu3b056okuhmg196u1cupomn8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm8KLgM-kUJp6bcpyjOjQtzouBkZ9VMtQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
