@@ -3,6 +3,7 @@ import { StyleSheet, Platform, Image, Text, View, ScrollView } from 'react-nativ
 
 import firebase from 'react-native-firebase';
 import QuestionsScreen from "./src/screens/standardGameMode/QuestionsScreen";
+import HomeScreen from "./src/screens/home/HomeScreen";
 
 export default class App extends React.Component {
   constructor() {
@@ -12,7 +13,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <QuestionsScreen/>
+      <HomeScreen/>
     );
   }
 }
