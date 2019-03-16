@@ -1,0 +1,92 @@
+{
+  "apple":[
+    {"onePlayer": [
+      "She did not {player1} on the test, for it was not the right thing to do.",
+      "If I don’t like {player1}, I’ll stay away from it.",
+      "Last {player1} in three week’s time I saw a spotted striped blue worm shake hands with a legless lizard.",
+      "Malls are great places {player1} shop; I can find everything I need under one roof.",
+      "The waves were {player1} on the shore; it was a lovely sight."
+    ]},
+    {"twoPlayer": [
+      "What {player1} the person thinking {player2} they discovered cow’s milk was fine for human consumption… and why did they do it in the first place!?",
+      "Is {player1} {player2}?",
+      "The clock within {player1} blog and the clock on my {player2} are 1 hour different from each other.",
+      "She {player1} him to {player2} back at once.",
+      "He told {player1} a very {player2} adventure story."
+    ]},
+    {"threePlayer": [
+      "We need to {player1} a {player2} for {player3} party.",
+      "The {player1} says {player2} to {player3} love.",
+      "She {player1} her {player2} to help {player3}.",
+      "I am counting {player1} calories, {player2} I {player3} want dessert.",
+      "We {player1} a {player2} {player3} rain in June."
+    ]},
+    {"fourPlayer": [
+      "He turned in the research paper on Friday; otherwise, he would have not passed the class.",
+      "She borrowed the book from him many years ago and hasn't yet returned it.",
+      "If you like tuna and tomato sauce- try combining the two. It’s really not as bad as it sounds.",
+      "Italy is my favorite country; in fact, I plan to spend two weeks there next year.",
+      "Joe made the sugar cookies; Susan decorated them."
+    ]}
+  ],
+  "banana":[
+    {"onePlayer": [
+      "She did not {player1} on the test, for it was not the right thing to do.",
+      "If I don’t like {player1}, I’ll stay away from it.",
+      "Last {player1} in three week’s time I saw a spotted striped blue worm shake hands with a legless lizard.",
+      "Malls are great places {player1} shop; I can find everything I need under one roof.",
+      "The waves were {player1} on the shore; it was a lovely sight."
+    ]},
+    {"twoPlayer": [
+      "What {player1} the person thinking {player2} they discovered cow’s milk was fine for human consumption… and why did they do it in the first place!?",
+      "Is {player1} {player2}?",
+      "The clock within {player1} blog and the clock on my {player2} are 1 hour different from each other.",
+      "She {player1} him to {player2} back at once.",
+      "He told {player1} a very {player2} adventure story."
+    ]},
+    {"threePlayer": [
+      "We need to {player1} a {player2} for {player3} party.",
+      "The {player1} says {player2} to {player3} love.",
+      "She {player1} her {player2} to help {player3}.",
+      "I am counting {player1} calories, {player2} I {player3} want dessert.",
+      "We {player1} a {player2} {player3} rain in June."
+    ]},
+    {"fourPlayer": [
+      "He turned in the research paper on Friday; otherwise, he would have not passed the class.",
+      "She borrowed the book from him many years ago and hasn't yet returned it.",
+      "If you like tuna and tomato sauce- try combining the two. It’s really not as bad as it sounds.",
+      "Italy is my favorite country; in fact, I plan to spend two weeks there next year.",
+      "Joe made the sugar cookies; Susan decorated them."
+    ]}
+  ],
+  "cucumber":[
+    {"onePlayer": [
+      "She did not {player1} on the test, for it was not the right thing to do.",
+      "If I don’t like {player1}, I’ll stay away from it.",
+      "Last {player1} in three week’s time I saw a spotted striped blue worm shake hands with a legless lizard.",
+      "Malls are great places {player1} shop; I can find everything I need under one roof.",
+      "The waves were {player1} on the shore; it was a lovely sight."
+    ]},
+    {"twoPlayer": [
+      "What {player1} the person thinking {player2} they discovered cow’s milk was fine for human consumption… and why did they do it in the first place!?",
+      "Is {player1} {player2}?",
+      "The clock within {player1} blog and the clock on my {player2} are 1 hour different from each other.",
+      "She {player1} him to {player2} back at once.",
+      "He told {player1} a very {player2} adventure story."
+    ]},
+    {"threePlayer": [
+      "We need to {player1} a {player2} for {player3} party.",
+      "The {player1} says {player2} to {player3} love.",
+      "She {player1} her {player2} to help {player3}.",
+      "I am counting {player1} calories, {player2} I {player3} want dessert.",
+      "We {player1} a {player2} {player3} rain in June."
+    ]},
+    {"fourPlayer": [
+      "He turned in the research paper on Friday; otherwise, he would have not passed the class.",
+      "She borrowed the book from him many years ago and hasn't yet returned it.",
+      "If you like tuna and tomato sauce- try combining the two. It’s really not as bad as it sounds.",
+      "Italy is my favorite country; in fact, I plan to spend two weeks there next year.",
+      "Joe made the sugar cookies; Susan decorated them."
+    ]}
+  ]
+}
