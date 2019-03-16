@@ -10,7 +10,8 @@ import {
   Image,
   Dimensions,
   LayoutAnimation,
-  UIManager
+  UIManager,
+  Button
 } from 'react-native';
 import PlayerInput from './PlayerInput'
 const width = Dimensions.get('window').width;
@@ -71,16 +72,18 @@ export default class HomeScreen extends React.Component {
               )
             })}
           </View>
+          <Button
+            onPress={this.addMore}
+            title="Add Player"
+            color="#841584"
+          />
         </ScrollView>
 
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.btn}
-          disabled={this.state.disabled}
+        <Button
           onPress={this.addMore}
-        >
-          <Image source = { require('../../../assets/add.png') } style = { styles.btnImage }/>
-        </TouchableOpacity>
+          title="Start Game"
+          color="#841584"
+        />
       </View>
     );
   }
