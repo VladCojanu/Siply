@@ -17,9 +17,13 @@ import PlayerInput from './PlayerInput'
 const width = Dimensions.get('window').width;
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Welcome',
+  }
+
   constructor() {
     super();
-    this.state = { valueArray: [], disabled: false }
+    this.state = { players: [], disabled: false }
     this.addNewEle = false;
     this.index = 0;
   }
@@ -35,23 +39,24 @@ export default class HomeScreen extends React.Component {
 
     this.setState({
       disabled: true,
-      valueArray: [...this.state.valueArray, newlyAddedValue]
+      players: [...this.state.players, newlyAddedValue]
     });
   }
 
   remove(id) {
     this.addNewEle = false;
-    const newArray = [...this.state.valueArray];
+    const newArray = [...this.state.players];
     newArray.splice(newArray.findIndex(ele => ele.id === id), 1);
 
     this.setState(() => {
       return {
-        valueArray: newArray
+        players: newArray
       }
     })
   }
 
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <ScrollView
@@ -61,7 +66,7 @@ export default class HomeScreen extends React.Component {
           }}
         >
           <View style={{ flex: 1, padding: 4 }}>
-            {this.state.valueArray.map(ele => {
+            {this.state.players.map(ele => {
               return (
                 <PlayerInput
                   key={ele.id}
@@ -80,7 +85,7 @@ export default class HomeScreen extends React.Component {
         </ScrollView>
 
         <Button
-          onPress={this.addMore}
+          onPress={() => navigate('QuestionsScreen', {players : this.state.players})}
           title="Start Game"
           color="#841584"
         />
