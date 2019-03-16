@@ -101,7 +101,7 @@ export default class HomeScreen extends React.Component {
         </ScrollView>
 
         <Button
-          onPress={() => navigate('QuestionsScreen', {players : this.state.players})}
+          onPress={() => navigate('Questions', {players : this.state.players})}
           title="Start Game"
           color="#841584"
         />

@@ -2,37 +2,26 @@ import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 
 import testQuestions from '../../resources/testQuestions.json'
+import {NUM_QUESTIONS} from '../../constants.js'
 
 const twoPlayers = ["Micky", "Donald"]
 const threePlayers = ["Einstein", "Newton", "Hawking"]
 const fourPlayers = ["Sheldon", "Leonard", "Penny", "Amy"]
 
 class QuestionsScreen extends React.Component {
+  players
+  testQuestionsObject
+
     constructor() {
       super()
       this.state={
         questionCategory: 0,
         questionType: 0,
-        singleQuestion: 0
+        singleQuestion: 0,
+        questionCount: 1
       }
     }
-
-    players;
-    testQuestionsObject
-
-    getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
-    newQuestion() {
-      this.setState(
-        {
-          questionCategory: this.getRandomInt(3),
-          questionType: this.getRandomInt(this.players.length),
-          singleQuestion: this.getRandomInt(this.testQuestionsObject[this.state.questionType].length)
-        })
-    }
-
+    
     getViewBackground() {
       switch(this.state.questionCategory) {
         case 0: return {backgroundColor: "red"}
@@ -47,8 +36,8 @@ class QuestionsScreen extends React.Component {
     }
 
   render() {
-      let randomQuestion = Object.values(this.testQuestionsObject[this.state.questionCategory][this.state.questionType])[0][this.state.singleQuestion]
-      shuffle(this.players)
+    let randomQuestion = Object.values(this.testQuestionsObject[this.state.questionCategory][this.state.questionType])[0][this.state.singleQuestion]
+    shuffle(this.players)
 
     randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1],
       player3: this.players[2], player4: this.players[3]});
@@ -64,12 +53,36 @@ class QuestionsScreen extends React.Component {
       }*/
 
       return (
-        <TouchableOpacity onPress={()=> {this.newQuestion()}} style={[styles.container, this.getViewBackground()]}>
+        <TouchableOpacity onPress={()=> {this.nextState()}} style={[styles.container, this.getViewBackground()]}>
           <Text>{randomQuestion}</Text>
         </TouchableOpacity>
       )
     }
 
+    nextState() {
+      console.log('nextState, questionCount=' + this.state.questionCount)
+      console.log('nextState, NUM_QUESTIONS=' + NUM_QUESTIONS)
+      if(this.state.questionCount === NUM_QUESTIONS){
+        // TODO: Add drink counts to player objects.
+        const {navigate} = this.props.navigation;
+        navigate('Summary', {players : this.state.players})
+      } else {
+        this.newQuestion()
+      }
+    }
+
+    newQuestion() {
+      this.setState((prevState) => ({
+          questionCategory: this.getRandomInt(3),
+          questionType: this.getRandomInt(this.players.length),
+          singleQuestion: this.getRandomInt(this.testQuestionsObject[this.state.questionType].length),
+          questionCount : prevState.questionCount + 1
+        }))
+    }
+
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
 }
 
 export default QuestionsScreen

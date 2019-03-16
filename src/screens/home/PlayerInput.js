@@ -100,10 +100,3 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   }
 });
-
-/*
-<Text
-          style={styles.text}>
-          Row {this.props.item.text}
-        </Text>
- */

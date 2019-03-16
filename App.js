@@ -4,10 +4,12 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 import firebase from 'react-native-firebase';
 import QuestionsScreen from "./src/screens/standardGameMode/QuestionsScreen";
 import HomeScreen from "./src/screens/home/HomeScreen";
+import SummaryScreen from "./src/screens/summary/SummaryScreen";
 
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
-  QuestionsScreen: {screen: QuestionsScreen},
+  Questions: {screen: QuestionsScreen},
+  Summary: {screen: SummaryScreen}
 });
 
 const App = createAppContainer(MainNavigator);
