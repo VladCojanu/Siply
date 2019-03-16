@@ -26,9 +26,10 @@ export default class HomeScreen extends React.Component {
     this.state = { players: [], disabled: false }
     this.addNewEle = false;
     this.index = 0;
+    this.updatePlayerName = this.updatePlayerName.bind(this)
   }
 
-  afterAnimationComplete = () => {
+  afterRenderingComplete = () => {
     this.index += 1;
     this.setState({ disabled: false });
   }
@@ -55,6 +56,20 @@ export default class HomeScreen extends React.Component {
     })
   }
 
+  updatePlayerName(name, id) {
+    const newArray = [...this.state.players]
+    newArray[newArray.findIndex(ele => ele.id === id)].name = name;
+    this.setState({
+        players: newArray
+    })
+  }
+
+  componentDidUpdate() {
+    /*console.log("***************")
+    console.log(this.state.players)*/
+  }
+
+
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -72,7 +87,8 @@ export default class HomeScreen extends React.Component {
                   key={ele.id}
                   item={ele}
                   removeItem={(id) => this.remove(id)}
-                  afterAnimationComplete={this.afterAnimationComplete}
+                  afterRenderingComplete={this.afterRenderingComplete}
+                  updatePlayerName={this.updatePlayerName}
                 />
               )
             })}

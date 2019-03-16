@@ -42,10 +42,9 @@ class QuestionsScreen extends React.Component {
     }
 
     componentWillMount() {
-      this.players = threePlayers
+      this.players = this.props.navigation.getParam("players").map(x => x.name)
       this.testQuestionsObject = Object.values(testQuestions)
     }
-
 
   render() {
       let randomQuestion = Object.values(this.testQuestionsObject[this.state.questionCategory][this.state.questionType])[0][this.state.singleQuestion]

@@ -9,32 +9,21 @@ export default class PlayerInput extends React.Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if(nextProps.item.id !== this.props.item.id) {
-      return true;
-    }
-    return false;
-  }
-
-  componentDidMount() {
-    this.props.afterAnimationComplete();
-  };
-
   removeItem = () => {
     this.props.removeItem(this.props.item.id);
+  };
+
+  componentDidMount() {
+    this.props.afterRenderingComplete();
   };
 
   render() {
     return (
       <View>
-        {/*<Text
-          style={styles.text}>
-          Row {this.props.item.text}
-        </Text>*/}
         <TextInput
           style={{height: 40}}
           placeholder="Player Name"
-          onChangeText={(text) => this.setState({text})}
+          onChangeText={(text) => this.props.updatePlayerName(text, this.props.item.id)}
         />
         <TouchableOpacity
           style={styles.removeBtn}
