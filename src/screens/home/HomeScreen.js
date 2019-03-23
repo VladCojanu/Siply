@@ -21,9 +21,12 @@ export default class HomeScreen extends React.Component {
     title: 'Welcome',
   }
 
-  constructor() {
-    super();
-    this.state = { players: [], disabled: false }
+  constructor(props) {
+    super(props);
+
+    let playersProp = this.props.navigation.getParam("players")
+    let playersArr =  typeof playersProp === 'undefined' ?  [] : playersProp
+    this.state = { players: playersArr, disabled: false }
     this.addNewEle = false;
     this.index = 0;
     this.updatePlayerName = this.updatePlayerName.bind(this)
