@@ -1,8 +1,10 @@
 import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
+import Modal from "react-native-modal";
 
 import testQuestions from '../../resources/testQuestions.json'
 import {NUM_QUESTIONS} from '../../constants.js'
+import AddNewPlayerModal from "../../components/AddNewPlayerModal";
 
 const twoPlayers = ["Micky", "Donald"]
 const threePlayers = ["Einstein", "Newton", "Hawking"]
@@ -12,28 +14,20 @@ class QuestionsScreen extends React.Component {
   players
   testQuestionsObject
 
-    constructor() {
-      super()
-      this.state={
-        questionCategory: 0,
-        questionType: 0,
-        singleQuestion: 0,
-        questionCount: 1
-      }
+  constructor() {
+    super()
+    this.state={
+      questionCategory: 0,
+      questionType: 0,
+      singleQuestion: 0,
+      questionCount: 1
     }
-    
-    getViewBackground() {
-      switch(this.state.questionCategory) {
-        case 0: return {backgroundColor: "red"}
-        case 1: return {backgroundColor: "yellow"}
-        case 2: return {backgroundColor: "green"}
-      }
-    }
+  }
 
-    componentWillMount() {
-      this.players = this.props.navigation.getParam("players").map(x => x.name)
-      this.testQuestionsObject = Object.values(testQuestions)
-    }
+  componentWillMount() {
+    this.players = this.props.navigation.getParam("players").map(x => x.name)
+    this.testQuestionsObject = Object.values(testQuestions)
+  }
 
   render() {
     let randomQuestion = Object.values(this.testQuestionsObject[this.state.questionCategory][this.state.questionType])[0][this.state.singleQuestion]
@@ -42,20 +36,13 @@ class QuestionsScreen extends React.Component {
     randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1],
       player3: this.players[2], player4: this.players[3]});
 
-      /*
-      switch(this.players.length) {
-        case 1: randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0]}); break;
-        case 2: randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1]}); break;
-        case 3: randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1],
-          player3: this.players[2]}); break;
-        case 4: randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1],
-          player3: this.players[2], player4: this.players[3]}); break;
-      }*/
-
       return (
-        <TouchableOpacity onPress={()=> {this.nextState()}} style={[styles.container, this.getViewBackground()]}>
-          <Text>{randomQuestion}</Text>
-        </TouchableOpacity>
+        <View>
+          <AddNewPlayerModal addNewPlayer={(newPlayerName) => this.addNewPlayer(newPlayerName)}/>
+          <TouchableOpacity onPress={()=> {this.nextState()}} style={[styles.container, this.getViewBackground()]}>
+            <Text>{randomQuestion}</Text>
+          </TouchableOpacity>
+        </View>
       )
     }
 
@@ -82,6 +69,18 @@ class QuestionsScreen extends React.Component {
 
     getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    addNewPlayer(newPLayerName) {
+    this.players.push(newPLayerName)
+  }
+
+    getViewBackground() {
+      switch(this.state.questionCategory) {
+        case 0: return {backgroundColor: "red"}
+        case 1: return {backgroundColor: "yellow"}
+        case 2: return {backgroundColor: "green"}
+      }
     }
 }
 

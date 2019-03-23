@@ -21,10 +21,10 @@ export default class PlayerInput extends React.Component {
     return (
       <View>
         <TextInput
-          style={{height: 40}}
-          placeholder="Player Name"
-          onChangeText={(text) => this.props.updatePlayerName(text, this.props.item.id)}
-        />
+        style={{height: 40}}
+        placeholder="Player Name"
+        onChangeText={(text) => this.props.updatePlayerName(text, this.props.item.id)}
+      />
         <TouchableOpacity
           style={styles.removeBtn}
           onPress={this.removeItem}
