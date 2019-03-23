@@ -65,7 +65,7 @@ class QuestionsScreen extends React.Component {
       if(this.state.questionCount === NUM_QUESTIONS){
         // TODO: Add drink counts to player objects.
         const {navigate} = this.props.navigation;
-        navigate('Summary', {players : this.state.players})
+        navigate('Summary', {players : this.players})
       } else {
         this.newQuestion()
       }
