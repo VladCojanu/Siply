@@ -1,0 +1,171 @@
+{
+  "Regular": [
+    {
+      "onePlayer": [
+        "She did not {player1} on the test, for it was not the right thing to do."
+      ]
+    },
+    {
+      "twoPlayer": [
+        " a string"
+      ]
+    },
+    {
+      "threePlayer": [
+        "We need to {player1} a {player2} for {player3} party."
+      ]
+    },
+    {
+      "fourPlayer": [
+        "He turned in the research paper on Friday; otherwise, he would have not passed the class."
+      ]
+    }
+  ],
+  "Infected": [
+    {
+      "onePlayer": [
+        "She did not {player1} on the test, for it was not the right thing to do."
+      ]
+    },
+    {
+      "twoPlayer": [
+        "A string"
+      ]
+    },
+    {
+      "threePlayer": [
+        "We need to {player1} a {player2} for {player3} party."
+      ]
+    },
+    {
+      "fourPlayer": [
+        "He turned in the research paper on Friday; otherwise, he would have not passed the class."
+      ]
+    }
+  ],
+  "Truth": [
+    {
+      "onePlayer": [
+        "{players1}, If you had to sleep with one person in this room, who would it be? Or drink {amount} sips",
+        "{players1}, What’s the raunchiest porn you’ve ever watched? Or drink {amount} sips",
+        "{players1}, What’s the hardest drug you’ve done? Or drink {amount} sips",
+        "{players1}, What’s the most degrading thing you’ve ever done during sex? Or drink {amount} sips",
+        "{players1}, Who’s the most inappropriate person you’ve ever fantasied about? Or drink {amount} sips",
+        "{players1}, What’s the most embarrassing thing you’ve ever done while drunk? Or drink {amount} sips",
+        "{players1}, What’s the biggest lie you’ve ever told a significant other? Or drink {amount} sips",
+        "{players1}, How many people in this room would you willingly bang? Or drink {amount} sips",
+        "{players1}, What’s the most embarrassing item you’ve ever used to get yourself off? Or drink {amount} sips",
+        "{players1}, What was the last thing you masturbated to? Or drink {amount} sips",
+        "{players1}, What’s the #1 thing you would never want your parents to find out about you? Or drink {amount} sips",
+        "{players1}, What was the worst sex you ever had? Or drink {amount} sips",
+        "{players1}, What’s the kinkiest thing you’ve ever done? Or drink {amount} sips",
+        "{players1}, Which of your exes would you still be willing to sleep with? Or drink {amount} sips",
+        "{players1}, What’s the biggest secret that you’re keeping from everyone in this room? Or drink {amount} sips",
+        "{players1}, What’s your magic number? Or drink {amount} sips",
+        "{players1}, What’s the biggest age difference you’ve had between yourself and a sexual partner? Or drink {amount} sips",
+        "{players1}, What’s the kinkiest sex toy you’ve ever used with a partner? Or drink {amount} sips",
+        "{players1}, What’s the most scandalous location you’ve had sex in? Or drink {amount} sips",
+        "{players1}, What’s the most disgusting habit you have? Or drink {amount} sips",
+        "{players1}, What’s the most embarrassing thing that’s ever happened to you during sex? Or drink {amount} sips",
+        "{players1}, What’s your biggest turn-on? Or drink {amount} sips",
+        "{players1}, What’s your biggest turn-off? Or drink {amount} sips",
+        "{players1}, How long has your longest dry spell been? Or drink {amount} sips",
+        "{players1}, What – if any – amount of money would you be willing to have sex with a stranger for? Or drink {amount} sips",
+        "{players1}, What’s the most embarrassing TV show that you watch? Or drink {amount} sips",
+        "{players1}, What’s the furthest you’ve gone sexually with a member of the same sex? Or drink {amount} sips",
+        "{players1}, Which sexual act are you best at? Or drink {amount} sips",
+        "{players1}, Which sexual act are you worst at? Or drink {amount} sips",
+        "{players1}, Are you more dominant or more submissive in bed? Or drink {amount} sips",
+        "{players1}, What’s the dirtiest thing a partner’s ever asked you to do? Or drink {amount} sips",
+        "{players1}, What’s the most illegal thing you’ve ever done? Or drink {amount} sips",
+        "{players1}, Where’s the most inappropriate place you’ve ever masturbated? Or drink {amount} sips",
+        "{players1}, What’s the most desperate thing you’ve ever done because you were horny? Or drink {amount} sips",
+        "{players1}, What’s your most outrageous sexual fantasy? Or drink {amount} sips",
+        "{players1}, What was the last thing you cried over? Or drink {amount} sips",
+        "{players1}, How many sex toys do you own? Or drink {amount} sips",
+        "{players1}, What’s the longest you’ve gone without showering? Or drink {amount} sips",
+        "{players1}, What’s the most embarrassing thing you’ve ever been caught doing? Or drink {amount} sips",
+        "{players1}, How often do you fake orgasms? Or drink {amount} sips",
+        "{players1}, What’s the hottest sex you’ve ever had? Or drink {amount} sips",
+        "{players1}, What is your biggest sexual regret? Or drink {amount} sips",
+        "{players1}, What’s the dirtiest sext you’ve ever sent? Or drink {amount} sips",
+        "{players1}, What’s something you’ve done while drunk that you would never do sober? Or drink {amount} sips",
+        "{players1}, What’s the closest you’ve ever come to cheating? Or drink {amount} sips",
+        "{players1}, Who’s the most scandalous person you’ve had sex with? Or drink {amount} sips",
+        "{players1}, How many of the people you’ve slept with did you meet online? Or drink {amount} sips",
+        "{players1}, What’s the least amount of time you’ve known someone for before sleeping with them? Or drink {amount} sips",
+        "{players1}, What’s the most bizarre sexual role-play you’ve ever participated in? Or drink {amount} sips",
+        "{players1}, Which of these questions would you be the most mortified to answer? Or drink {amount} sips"
+      ]
+    },
+    {
+      "twoPlayer": [
+        "What {player1} the person thinking {player2} they discovered cow’s milk was fine for human consumption… and why did they do it in the first place!?"
+      ]
+    },
+    {
+      "threePlayer": [
+        "We need to {player1} a {player2} for {player3} party."
+      ]
+    },
+    {
+      "fourPlayer": [
+        "He turned in the research paper on Friday; otherwise, he would have not passed the class."
+      ]
+    }
+  ],
+  "Dare": [
+    {
+      "onePlayer": [
+        "{player1}: Remove your socks with your teeth or drink {amount} sips!",
+        "{player1}: Take an embarrassing selfie and post it as your profile picture or drink {amount} sips!",
+        "{player1}: Fill your mouth with water, and each person in the group must tell the funniest joke they know or drink {amount} sips!",
+        "If you spit up the water, you have to eat a spoonful of dirt or drink {amount} sips!",
+        "{player1}: Open Facebook, go to the account of the first person you see, and like every post on their wall going back to a year or drink {amount} sips!",
+        "{player1}: Until the next round, talk super loud, like nobody can hear you or drink {amount} sips!",
+        "{player1}: Make out with your hand or drink {amount} sips!",
+        "{player1}: Let someone else style your hair and keep it that way for the rest of the day or drink {amount} sips!",
+        "{player1}: Lick the bottom of your shoe or drink {amount} sips!",
+        "{player1}: Make repulsive sounds while eating and drinking for the rest of your game or drink {amount} sips!",
+        "{player1}: Cross your eyes when talking or drink {amount} sips!",
+        "{player1}: Talk without closing your mouth for the rest of the game or drink {amount} sips!",
+        "{player1}: Act like an animal of the group’s choosing or drink {amount} sips!",
+        "{player1}: Get into a debate with a wall or drink {amount} sips!",
+        "{player1}: Hiccup in between each word or drink {amount} sips!",
+        "{player1}: Spin around 10 times and try to walk straight or drink {amount} sips!",
+        "{player1}: Stand up and do jumping jacks until your next turn or drink {amount} sips!",
+        "{player1}: Call your mom and tell her you can't find a girlfriend in a very panicked voice or drink {amount} sips!",
+        "{player1}: Call MCDonald's and ask if they sell Whoppers or drink {amount} sips!",
+        "{player1}: Call pizza shop and ask if you can return a pizza or drink {amount} sips!",
+        "{player1}: Call a car dealership and ask if they have any horse buggies in stock or drink {amount} sips!",
+        "{player1}: Text someone \"hey or drink {amount} sips!\" Do this ten times and on the eleventh, reply with “hi or drink {amount} sips!",
+        "{player1}: Say “Banana” After Everything You Say Until It Is Your Turn Again or drink {amount} sips!",
+        "{player1}: Change your relationship status on Facebook to complicated or drink {amount} sips!",
+        "{player1}: Give A Massage To A Companion For 3 Minutes or drink {amount} sips!",
+        "{player1}: Everything you say for the rest of the game has to rhyme or drink {amount} sips!",
+        "{player1}: Sing instead of speaking for the next two rounds of the game or drink {amount} sips!",
+        "{player1}: Call a random number and sing \"Happy Birthday or drink {amount} sips!\"",
+        "{player1}: Call a Chinese restaurant and ask if they have sushi or drink {amount} sips!",
+        "{player1}: Get a random item and try to sell it to the rest of the group for the rest of the game or drink {amount} sips!",
+        "{player1}: Exchange A Clothing Item With The Player On Your Right or drink {amount} sips!",
+        "{player1}: Dance like a Cowboy or drink {amount} sips!",
+        "{player1}: Sit There In Nothing But Your Boxers or drink {amount} sips!"
+      ]
+    },
+    {
+      "twoPlayer": [
+        "What {player1} the person thinking {player2} they discovered cow’s milk was fine for human consumption… and why did they do it in the first place!?"
+      ]
+    },
+    {
+      "threePlayer": [
+        "We need to {player1} a {player2} for {player3} party."
+      ]
+    },
+    {
+      "fourPlayer": [
+        "He turned in the research paper on Friday; otherwise, he would have not passed the class."
+      ]
+    }
+  ]
+}
