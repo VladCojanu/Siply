@@ -24,8 +24,9 @@ export default class AddNewPlayerModal extends React.Component {
         <View style={styles.modalContent}>
           <Text>Add a new Player</Text>
           <TextInput
-            style={{height: 40}}
+            style={{height: 40, width: 120}}
             placeholder="Player Name"
+            textAlign={'center'}
             onChangeText={(text) => this.setState({newPlayerName: text})}
           />
           <Button
