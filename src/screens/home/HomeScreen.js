@@ -3,13 +3,8 @@ import {
   View,
   Platform,
   StyleSheet,
-  TouchableOpacity,
-  Animated,
   ScrollView,
-  Image,
   Dimensions,
-  LayoutAnimation,
-  UIManager
 } from "react-native";
 import { Button, Text } from "native-base";
 import PlayerInput from "./PlayerInput";
@@ -38,7 +33,7 @@ export default class HomeScreen extends React.Component {
 
   addMore = () => {
     this.addNewEle = true;
-    const newlyAddedValue = { id: "id_" + this.index, text: this.index + 1 };
+    const newlyAddedValue = { id: "id_" + this.index, text: this.index + 1, sips : 0 };
 
     this.setState({
       disabled: true,
@@ -64,11 +59,6 @@ export default class HomeScreen extends React.Component {
     this.setState({
       players: newArray
     });
-  }
-
-  componentDidUpdate() {
-    /*console.log("***************")
-    console.log(this.state.players)*/
   }
 
   render() {

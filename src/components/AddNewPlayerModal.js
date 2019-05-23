@@ -16,7 +16,7 @@ export default class AddNewPlayerModal extends React.Component {
     return (
       <View>
         <TouchableOpacity onPress={this._toggleModal}>
-          <Text>Show Modal</Text>
+          <Text>Add Player</Text>
         </TouchableOpacity>
         <Modal
         isVisible={this.state.isModalVisible}

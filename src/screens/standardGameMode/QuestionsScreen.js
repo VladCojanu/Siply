@@ -1,56 +1,59 @@
 import React from 'react'
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
-import Modal from "react-native-modal";
 
-import testQuestions from '../../resources/testQuestions.json'
+import questions from '../../resources/questions.json'
 import {NUM_QUESTIONS} from '../../constants.js'
 import AddNewPlayerModal from "../../components/AddNewPlayerModal";
 
-const twoPlayers = ["Micky", "Donald"]
-const threePlayers = ["Einstein", "Newton", "Hawking"]
-const fourPlayers = ["Sheldon", "Leonard", "Penny", "Amy"]
-
 class QuestionsScreen extends React.Component {
   players
-  testQuestionsObject
+  questionsObject
 
   constructor() {
     super()
     this.state={
-      questionCategory: 0,
+      questionCategory: "Truth",
       questionType: 0,
       singleQuestion: 0,
-      questionCount: 1
+      questionCount: 1, 
+      sipsForQuestion: this.getRandomInt(5) + 1
     }
   }
 
   componentWillMount() {
-    this.players = this.props.navigation.getParam("players").map(x => x.name)
-    this.testQuestionsObject = Object.values(testQuestions)
+    this.players = this.props.navigation.getParam("players").map(x => {
+      return {name : x.name, sips : x.sips}})
   }
 
   render() {
-    let randomQuestion = Object.values(this.testQuestionsObject[this.state.questionCategory][this.state.questionType])[0][this.state.singleQuestion]
-    shuffle(this.players)
+    let possibleQuestions = Object.values(questions[this.state.questionCategory][this.state.questionType])[0]
+    console.log("possibleQuestions:" + JSON.stringify(possibleQuestions))
+    let randomQuestion = possibleQuestions[this.getRandomInt(possibleQuestions.length - 1)]    
+    console.log("randomQuestion:" + JSON.stringify(randomQuestion))
 
-    randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0], player2: this.players[1],
-      player3: this.players[2], player4: this.players[3]});
+    randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0].name, 
+      amount: this.state.sipsForQuestion});
 
       return (
         <View>
           <AddNewPlayerModal addNewPlayer={(newPlayerName) => this.addNewPlayer(newPlayerName)}/>
-          <TouchableOpacity onPress={()=> {this.nextState()}} style={[styles.container, this.getViewBackground()]}>
+          <TouchableOpacity onPress={()=> {this.nextState(true)}} style={[styles.container, this.getViewBackground()]}>
             <Text>{randomQuestion}</Text>
           </TouchableOpacity>
         </View>
       )
     }
 
-    nextState() {
+    nextState(acceptedSips) {
+      if(acceptedSips) {
+        // We're assuming that only player1 can be given sips
+        this.players[0].sips += this.state.sipsForQuestion
+      }
+
       console.log('nextState, questionCount=' + this.state.questionCount)
       console.log('nextState, NUM_QUESTIONS=' + NUM_QUESTIONS)
+
       if(this.state.questionCount === NUM_QUESTIONS){
-        // TODO: Add drink counts to player objects.
         const {navigate} = this.props.navigation;
         navigate('Summary', {players : this.players})
       } else {
@@ -59,11 +62,13 @@ class QuestionsScreen extends React.Component {
     }
 
     newQuestion() {
+      shuffle(this.players)
+      questionCategory = this.getRandomInt(2) === 0 ? "Truth" : "Dare"
       this.setState((prevState) => ({
-          questionCategory: this.getRandomInt(3),
-          questionType: this.getRandomInt(this.players.length),
-          singleQuestion: this.getRandomInt(this.testQuestionsObject[this.state.questionType].length),
-          questionCount : prevState.questionCount + 1
+          questionCategory: questionCategory, // TODO: replace with: when more questions are added this.getRandomInt(3),
+          questionType: 0, // TODO: replace when we add questions with multiple players for each category this.getRandomInt(this.players.length),
+          questionCount : prevState.questionCount + 1,
+          sipsForQuestion: this.getRandomInt(5) + 1
         }))
     }
 
@@ -72,7 +77,7 @@ class QuestionsScreen extends React.Component {
     }
 
     addNewPlayer(newPLayerName) {
-    this.players.push(newPLayerName)
+    this.players.push({name : newPLayerName, sips : 0})
   }
 
     getViewBackground() {
