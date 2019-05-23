@@ -1,9 +1,9 @@
 import React from 'react'
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
-
+import {View, StyleSheet} from 'react-native'
+import QuestionCards from '../..//components/QuestionCards'
 import questions from '../../resources/questions.json'
 import {NUM_QUESTIONS} from '../../constants.js'
-import AddNewPlayerModal from "../../components/AddNewPlayerModal";
+import AddNewPlayerModal from "../../components/AddNewPlayerModal"
 
 class QuestionsScreen extends React.Component {
   players
@@ -27,24 +27,29 @@ class QuestionsScreen extends React.Component {
 
   render() {
     let possibleQuestions = Object.values(questions[this.state.questionCategory][this.state.questionType])[0]
-    console.log("possibleQuestions:" + JSON.stringify(possibleQuestions))
     let randomQuestion = possibleQuestions[this.getRandomInt(possibleQuestions.length - 1)]    
-    console.log("randomQuestion:" + JSON.stringify(randomQuestion))
 
     randomQuestion = randomQuestion.formatUnicorn({player1: this.players[0].name, 
       amount: this.state.sipsForQuestion});
+    console.log('the random question is:' + randomQuestion)
+      // <TouchableOpacity onPress={()=> {this.nextState(true)}} style={[styles.container, this.getViewBackground()]}>
+      //       <Text>{randomQuestion}</Text>
+      //     </TouchableOpacity>
 
       return (
         <View>
           <AddNewPlayerModal addNewPlayer={(newPlayerName) => this.addNewPlayer(newPlayerName)}/>
-          <TouchableOpacity onPress={()=> {this.nextState(true)}} style={[styles.container, this.getViewBackground()]}>
-            <Text>{randomQuestion}</Text>
-          </TouchableOpacity>
+          <QuestionCards 
+            style={styles.container}
+            cards={[{text : randomQuestion, backgroundColor:"gold"}]}
+            handleAccept={() => this.nextState(true)} 
+            handleDecline={() => this.nextState(false)} />
         </View>
       )
     }
 
     nextState(acceptedSips) {
+      console.log("next state called with: " + acceptedSips)
       if(acceptedSips) {
         // We're assuming that only player1 can be given sips
         this.players[0].sips += this.state.sipsForQuestion
@@ -93,8 +98,8 @@ export default QuestionsScreen
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    height: "100%",
+    width: "95%",
+    height: "95%",
     justifyContent: 'center',
     alignItems: 'center'
   },
